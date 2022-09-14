@@ -363,7 +363,7 @@
 //     },
 // };
 
-
+// Object.create(name = "Sercan")
 
 // console.log(user);
 // console.log(typeof user);
@@ -453,7 +453,7 @@ let sortedLetters = letters.sort();
 // console.log(sortedLetters)
 
 
-// letters.forEach((letter)=> {
+// letters.forEach((index,letter)=> {
 //  console.log( letter , letter.charCodeAt(0)) 
 // })
 
