@@ -18,29 +18,47 @@ const  filmList = document.getElementById("films")
 btnSubmit.addEventListener("click" , addFilm);
 
 function addFilm(){
+ 
     title = titleInput.value;
     director = directorInput.value;
     url = urlInput.value;
+
+    let newFilm = new NewFilm(title, director, url);
+
     if(title === "" || url === "" || director === ""){
         setAlert("danger" , "Bu alan bos olamaz!");
     }
     else{
 
-        setAlert("success" , "tebrikler");
-    filmList.innerHTML += `
-    <tr>
- <td><img src="${url}" class="img-fluid img-thumbnail" width="150"></td>
- <td>${title}</td>
-<td>${director}</td>
-<td><a href="#" id = "delete-film" class = "btn btn-danger">Filmi Sil</a></td>
-</tr>  
-    `
+      if(localStorage.getItem("film") == null){
+        localStorage.setItem("film", JSON.stringify([newFilm]))
+        setAlert("success" , "tebrikler");  
+      }
+
+     else{
+    
+        let getLocal =  JSON.parse(localStorage.getItem("film"));
+        getLocal.push(newFilm);
+        localStorage.setItem("film", JSON.stringify(getLocal));
+    }
+       
 }
 }
 
+       let getFromLocalStore = JSON.parse(localStorage.getItem("film"));
+       getFromLocalStore.forEach(element =>{
+        filmList.innerHTML += `
+        <tr>
+     <td><img src="${element.url}" class="img-fluid img-thumbnail" width="150"></td>
+     <td>${element.title}</td>
+    <td>${element.director}</td>
+    <td><a href="#" id = "delete-film" class = "btn btn-danger">Filmi Sil</a></td>
+    </tr>  
+        `
+       })
+   
 
-localStorage.setItem("key" , JSON.stringify([]))
 
-JSON.parse(localStorage.getItem());
+
 
 
