@@ -1,0 +1,54 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sercan",
+      "lang": "JS"
+    },
+    {
+      "id": 2,
+      "name": "Ali",
+      "lang": "Java"
+    },
+    {
+      "id": 3,
+      "name": "Ahmet",
+      "lang": "Flutter"
+    },
+    {
+      "id": 5,
+      "name": "Semih",
+      "lang": "PHP/Wordpress"
+    },
+    {
+      "id": 7,
+      "name": "Ahmet",
+      "lang": "Go"
+    },
+    {
+      "id": 9,
+      "name": "Semih",
+      "lang": "Go"
+    },
+    {
+      "id": 11,
+      "name": "Salih",
+      "lang": "PHP"
+    },
+    {
+      "id": 6,
+      "name": "SERCAN",
+      "lang": "Node.js"
+    },
+    {
+      "id": 10,
+      "name": "Mehmet",
+      "lang": "Go"
+    },
+    {
+      "id": 17,
+      "name": "Amin",
+      "lang": "PHP"
+    }
+  ]
+}
