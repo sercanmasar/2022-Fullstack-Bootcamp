@@ -26,7 +26,7 @@ export default class Product extends Component {
   </thead>
   <tbody>
     {this.props.products.map(product=> (
-      <tr>
+      <tr key={product.id} onClick={()=> this.props.handleClick(product.id)}>
       <th scope="row">
         {product.id}
       </th>
